@@ -1,133 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- INICIO GOOGLE ANALYTICS -->
+    <!-- Si estás copiando este código, borra esta sección -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0Z49VX640"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-E0Z49VX640');
+    </script>
+    <!-- FIN GOOGLE ANALYTICS -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="If Elon cashed out all of his stocks & assets today he would have
-    approximately 164 billon dollars in his bank account.
-    ¿What would you spend it on?"
-    />
-    <!-- Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-8G10WY5JDN"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
 
-      gtag('config', 'G-8G10WY5JDN');
-    </script>
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1888723389443406"
-      crossorigin="anonymous"
-    ></script>
+    <title>¡Gasta la fortuna de Sebastián Piñera!</title>
+    <meta name="description" content="Una visualización que te ayuda a entender la magnitud de la fortuna de Sebastián Piñera.">
+    <meta name="author" content="Francisco Guíñez">
+    <meta name="keywords" content="Chile, Sebastian Piñera, Millonarios, Presidente de Chile">
 
-    <title>Spend Elon Musk Fortune!</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./img/usd-circle.svg" />
   </head>
   <body>
     <header>
-      <img src="https://i.imgur.com/plmxbIv.jpg" alt="" />
+      <img src="http://www.cuicozorron.cl/wp-content/uploads/2020/05/pi%C3%B1era-mascarilla-8-1.jpg" alt="" />
       <div class="title-container">
-        <h1>Spend Elon Musk's Fortune!</h1>
+        <h1>¡Gasta la fortuna de Sebastián Piñera!</h1>
         <p>
-          If Elon cashed out all of his stocks & assets today he would have
+          Si Piñera hubiera cobrado todas sus acciones y activos hoy, tendría aproximadamente
           <br />
-          approximately <strong>$217,000,000,000</strong> (US Dollars) in his
-          bank account.
+          <strong>$2.277.818.000.000 pesos chilenos</strong> ($2.8B de dolares)
+          <br />
+          en su cuenta de banco.
         </p>
-        <p>¿What would you <strong>spend it</strong> on?</p>
-        <small>Have your receipt at the end!</small>
+        <p><strong>¿En qué lo gastarías?</strong></p>
+        <small>¡Revisa tu boleta al final!</small>
       </div>
     </header>
-
-    <!-- AD TEST -->
-    <!-- <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1888723389443406"
-      crossorigin="anonymous"
-    ></script>
-    <ins
-      class="adsbygoogle"
-      style="display: block"
-      data-ad-client="ca-pub-1888723389443406"
-      data-ad-slot="9481104978"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    ></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script> -->
-    <!-- AD TEST END -->
-
     <div class="total">
-      <p class="totalMoney" id="totalMoney">Remaining: $217,000,000,000</p>
+      <p class="totalMoney" id="totalMoney">Te quedan: $2.277.818.000.000</p>
       <p class="percentageLeft" id="percentageLeft">
-        You haven't spent a single dollar, start buying!
+        No has gastado un solo peso, ¡empieza a comprar!
       </p>
     </div>
 
     <div class="app-container" id="allElements"></div>
-    <!-- AD TEST -->
-    <!-- <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1888723389443406"
-      crossorigin="anonymous"
-    ></script>
-    <ins
-      class="adsbygoogle"
-      style="display: block"
-      data-ad-client="ca-pub-1888723389443406"
-      data-ad-slot="9481104978"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    ></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script> -->
-    <!-- AD TEST END -->
+
     <div class="receipt" id="receipt-container">
-      <h1>Receipt</h1>
+      <h1>Boleta</h1>
     </div>
 
     <a class="btn-print" onclick="printSection('receipt-container')"
-      ><button>Print Receipt</button></a
+      ><button>Imprimir Boleta</button></a
     >
-    <!-- AD TEST -->
-    <!-- <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1888723389443406"
-      crossorigin="anonymous"
-    ></script>
-    <ins
-      class="adsbygoogle"
-      style="display: block"
-      data-ad-client="ca-pub-1888723389443406"
-      data-ad-slot="9481104978"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    ></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script> -->
-    <!-- AD TEST END -->
 
     <div class="coffe-link">
       <small>
-        Inspired by <a href="https://neal.fun/">neal.fun</a>, created by
-        <a href="https://github.com/ninotrivelli">Nico</a>
-        <br />
-        <!-- Having fun?
-        <a href="https://www.buymeacoffee.com/ninotrivelli">Buy me a coffee!</a> -->
+        Inspirado por <a href="https://github.com/ninotrivelli/Spend-Elon-Fortune">ninotrivelli</a>, quien se inspiró en <a href="https://neal.fun/">neal.fun</a>. Creado por
+        <a href="https://github.com/fguinez">fguinez</a>.
       </small>
     </div>
     <script src="code.js"></script>

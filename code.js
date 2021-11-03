@@ -7,7 +7,8 @@ let sellButtons = document.querySelectorAll('#sell');
 const appContainer = document.querySelector('.app-container');
 
 // Default data
-let elonFortune = 217000000000;
+let initFortune = 2277818000000
+let fortune = initFortune;
 let totalPercentage = 100;
 
 let elements = [];
@@ -27,9 +28,9 @@ appContainer.addEventListener('click', (e) => {
 function buyItem(element) {
   // change default data to new data
 
-  if (elonFortune - Number(element.dataset.price) >= 0) {
-    elonFortune -= Number(element.dataset.price);
-    totalPercentage = (elonFortune * 100) / 217000000000;
+  if (fortune - Number(element.dataset.price) >= 0) {
+    fortune -= Number(element.dataset.price);
+    totalPercentage = (fortune * 100) / initFortune;
 
     // Item name
     let itemName = element.parentElement.querySelector('#name').textContent;
@@ -62,8 +63,8 @@ function buyItem(element) {
 }
 
 function cantAffordAlert() {
-  totalMoneyElement.innerHTML = `<p class="totalMoney">Can't afford that!</p>`;
-  percentageElement.innerHTML = `<p class ="percentageLeft">Sell something!</p>`;
+  totalMoneyElement.innerHTML = `<p class="totalMoney">¡No puedes pagar eso! </p>`;
+  percentageElement.innerHTML = `<p class ="percentageLeft">¡Vende algo!</p>`;
 }
 
 function createReciptItem(name, amount, total) {
@@ -83,8 +84,8 @@ function createReciptItem(name, amount, total) {
 function sellItem(element) {
   // change default data to new data
 
-  elonFortune += Number(element.dataset.price);
-  totalPercentage = (elonFortune * 100) / 217000000000;
+  fortune += Number(element.dataset.price);
+  totalPercentage = (fortune * 100) / initFortune;
 
   // Item name
   let itemName = element.parentElement.querySelector('p').textContent;
@@ -113,17 +114,17 @@ function sellItem(element) {
 }
 
 function updateTotalAndPercentage() {
-  totalMoneyElement.innerHTML = `<p class="totalMoney">Remaining: ${formatMoney(
-    elonFortune
-  )} USD</p>`;
-  percentageElement.innerHTML = `<p class ="percentageLeft">You only spent ${(
+  totalMoneyElement.innerHTML = `<p class="totalMoney">Te quedan: ${formatMoney(
+    fortune
+  )} pesos</p>`;
+  percentageElement.innerHTML = `<p class ="percentageLeft">Solo gastaste ${(
     100 - totalPercentage
-  ).toFixed(6)} % of the total!</p>`;
+  ).toFixed(6)} % del total!</p>`;
 }
 
 // Format Money Function
 function formatMoney(number) {
-  return number.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+  return number.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.');
 }
 
 // Class to create unique receipt items
@@ -175,20 +176,20 @@ function updateReceiptItem(receiptItem) {
 
 // Function to create recipt (iterara por el array y mostrara los objetos en una lista)
 function updateReceipt() {
-  let title = `<h1>Receipt</h1>`;
+  let title = `<h1>Boleta</h1>`;
   let receipt = '';
-  let total = formatMoney(217000000000 - elonFortune);
+  let total = formatMoney(initFortune - fortune);
 
   for (let i = 0; i < receiptItemsArr.length; i++) {
     let itemX = receiptItemsArr[i];
 
     if (itemX.amount !== 0) {
-      receipt += `<p>${itemX.name} x <strong> ${itemX.amount}</strong>..............$ ${itemX.total}</p>`;
+      receipt += `<p>${itemX.name} x <strong> ${itemX.amount}</strong> ......................$ ${itemX.total}</p>`;
     }
   }
 
   document.querySelector('#receipt-container').innerHTML =
-    title + receipt + `<p class="totalRecipt">Total is: $ ${total}</p>`;
+    title + receipt + `<p class="totalRecipt">Monto total: $ ${total}</p>`;
 }
 
 // Function to print
@@ -223,238 +224,220 @@ preLoad();
 
 function preLoad() {
   createAndSaveElement(
-    'Nintendo Switch',
-    299,
-    'https://i.imgur.com/0FO7MMz.jpg'
-  );
-  createAndSaveElement('PS5', 499, 'https://i.imgur.com/0KSqKXn.jpg');
-  createAndSaveElement('Xbox Series X', 499, 'https://i.imgur.com/NZ6ySwj.jpg');
-  createAndSaveElement(
-    'Iphone 13 Pro Max - 1TB',
-    1499,
-    'https://i.imgur.com/uUyKgKG.jpg'
-  );
-  createAndSaveElement(
-    'Samsung S21 Ultra - 256GB',
-    1249,
-    'https://i.imgur.com/mBFaPDN.jpg'
-  );
-  createAndSaveElement(
-    "New MacBook Pro 14' M1 Pro Top Spec",
-    3299,
-    'https://i.imgur.com/69V42nb.jpg'
+    'Canasta Básica de Alimentos por 80 años',
+    46660800,
+    'img/canasta.jpg'
   );
 
   createAndSaveElement(
-    'Pro Gaming PC(AMD 5950X, RTX 3090, 64GB, 4TB SSD)',
-    4950,
+    'Pagar un sueldo mínimo por 80 años',
+    323520000,
+    'img/sueldo-minimo.jpg'
+  );
+
+  createAndSaveElement(
+    'Pasajes Metro de Santiago por 80 años',
+    42048000,
+    'img/metro.jpg'
+  );
+
+  createAndSaveElement(
+    'Nintendo Switch',
+    350000,
+    'https://i.imgur.com/0FO7MMz.jpg'
+  );
+  createAndSaveElement('PS5', 929900, 'https://i.imgur.com/0KSqKXn.jpg');
+  createAndSaveElement('Xbox Series X', 779990, 'https://i.imgur.com/NZ6ySwj.jpg');
+  createAndSaveElement(
+    'iPhone 12 Pro Max 256GB',
+    1138900,
+    'https://i.linio.com/p/684a827e8d998b926524cedd05c9eb15-product.webp'
+  );
+
+  createAndSaveElement(
+    'Super PC Gamer (Ryzen 5950X, RTX 3090, 64GB, 4TB SSD)',
+    4080893,
     'https://i.imgur.com/LVouJCx.jpg'
   );
   createAndSaveElement(
-    'Razer Blade 14 Top spec (2021)',
-    2799,
+    'Razer Blade 14 (2021) (Mejores especificaciones)',
+    2307559,
     'https://i.imgur.com/GymbKY5.jpg'
   );
   createAndSaveElement(
-    'Mac Pro Top spec (2021) (28 Cores, 8TB SSD, 1TB RAM, 32GB Video)',
-    53799,
+    'Mac Pro (2021) (Mejores especificaciones: 28 Cores, 8TB SSD, 1TB RAM, 32GB Video)',
+    44353127,
     'https://i.imgur.com/3fGEKLh.jpg'
   );
   createAndSaveElement(
-    'Spotify for 80 years',
-    9600,
+    'Spotify por 80 años',
+    3984000,
     'https://i.imgur.com/iMXaSUF.jpg'
   );
   createAndSaveElement(
-    'Entire Steam library (2021 - No discounts)',
-    628000,
+    'Todos los juegos de Steam (2021 - Sin descuentos)',
+    517737570,
     'https://i.imgur.com/W5EmtUf.jpg'
   );
   createAndSaveElement(
-    'Netflix for 80 Years',
-    13500,
+    'Netflix por 80 años',
+    5702400,
     'https://i.imgur.com/gKxWs5h.jpg'
   );
   createAndSaveElement(
-    'Entire production of Nvidia GPUs for 2022',
-    700000000,
-    'https://i.imgur.com/5IGLmiB.jpg'
-  );
-  createAndSaveElement(
-    'Private Concert with ANY Super Star',
-    1000000,
-    'https://i.imgur.com/NemUFgb.jpg'
-  );
-  createAndSaveElement(
-    'Give 10,000 USD to 5000 people',
-    50000000,
-    'https://i.imgur.com/kym3viy.jpg'
-  );
-  createAndSaveElement(
     "LG 88' OLED 8K ThinQ®",
-    19990,
+    16480213,
     'https://i.imgur.com/0QQlGOv.jpg'
   );
-  createAndSaveElement('Fiat 500', 19000, 'https://i.imgur.com/hvfF6Gc.jpg');
+
   createAndSaveElement(
-    'Toyota Camry',
-    29000,
-    'https://i.imgur.com/f2S0wmc.jpg'
+    'Toyota Yaris',
+    11790000,
+    'img/yaris.jpg'
   );
   createAndSaveElement(
-    'Ford F150 Raptor 2022',
-    65900,
-    'https://i.imgur.com/YeJdI91.jpg'
+    'Suzuki Baleno',
+    11340000,
+    'img/baleno.png'
   );
   createAndSaveElement(
     'Tesla Model S Plaid',
-    132000,
+    108823980,
     'https://i.imgur.com/qGNbe3T.jpg'
   );
 
   createAndSaveElement(
     'Cybertruck (Tri Motor)',
-    70000,
+    57709685,
     'https://i.imgur.com/VcilGS4.jpg'
   );
-  createAndSaveElement('Ferrari F8', 276000, 'https://i.imgur.com/8LNZBZi.jpg');
+  createAndSaveElement('Ferrari F8', 243205100, 'https://i.imgur.com/8LNZBZi.jpg');
   createAndSaveElement(
     'Lamborghini Aventador SVJ',
-    512000,
+    422105120,
     'https://i.imgur.com/2zzI1XB.jpg'
   );
   createAndSaveElement(
     'Bugatti La Voiture Noire',
-    11000000,
+    9068664800,
     'https://i.imgur.com/4TTHYJQ.jpg'
   );
   createAndSaveElement(
-    '1000 Acres of land',
-    4100000,
-    'https://i.imgur.com/uhKbVhH.jpg'
+    '1000 hectareas en Chiloé',
+    5000000000,
+    'img/chiloe.gif'
   );
   createAndSaveElement(
-    'Private Island, Central America (medium size)',
-    4950000,
+    'Isla Privada, Centroamérica (tamaño mediano)',
+    4080899200,
     'https://i.imgur.com/1am1OfX.jpg'
   );
   createAndSaveElement(
-    'Eating out for 80 years (4 meals/day)',
-    3100000,
+    'Comer afuera por 80 años (4 comidas por día)',
+    2555714600,
     'https://i.imgur.com/sm3cSP5.jpg'
   );
 
   createAndSaveElement(
-    'Diamond Ring (Tiffany - 1 carat)',
-    17000,
+    'Anillo de diamante (Tiffany)',
+    14015209,
     'https://i.imgur.com/3AkEw9K.jpg'
   );
 
-  createAndSaveElement('Rolex', 12000, 'https://i.imgur.com/YzLqM8c.jpg');
-  createAndSaveElement(
-    'Les Femmes d’Alger by Picasso',
-    179400000,
-    'https://i.imgur.com/2XznMU7.jpg'
-  );
+  createAndSaveElement('Rolex', 9893089, 'https://i.imgur.com/YzLqM8c.jpg');
+
+  createAndSaveElement('Velero', 107196360, 'https://i.imgur.com/iLZmBPD.jpg');
 
   createAndSaveElement(
-    'Monalisa by Leonardo da Vinci (estimate)',
-    869000000,
-    'https://i.imgur.com/B5WMXSX.jpg'
-  );
-
-  createAndSaveElement(
-    'Helicopter Bell 206',
-    750000,
+    'Helicóptero Bell 206',
+    618318050,
     'https://i.imgur.com/3oOLIDc.jpg'
   );
+  createAndSaveElement(
+    'Jet privado Learjet 75',
+    11129725000,
+    'img/jet.jpg'
+  );
+
+  createAndSaveElement('Tanque M1 Abrams', 7628537500, 'https://i.imgur.com/TZP2OgW.jpg');
 
   createAndSaveElement(
-    '10 plastic surgeries',
-    130000,
+    '10 cirugías plásticas',
+    34499500,
     'https://i.imgur.com/We5W9mt.jpg'
   );
 
   createAndSaveElement(
-    'One week in EVERY country of the planet',
-    1250000,
+    'Una semana en TODOS los países del planeta',
+    1030531000,
     'https://i.imgur.com/CFjtIjN.jpg'
   );
 
+  // 50M USD
   createAndSaveElement(
-    'College Education (USA)',
-    170000,
+    'Viaje al espacio por 3 días (estimado)',
+    40662612000,
+    'https://www.focus.it/images/2020/11/16/crew-dragon-resilience_1020x680.jpg'
+  );
+
+  createAndSaveElement(
+    'Una carrera universitaria en USA',
+    140152220,
     'https://i.imgur.com/nX6YLXf.jpg'
   );
 
   createAndSaveElement(
-    'NFL Team (Average)',
-    3000000000,
-    'https://i.imgur.com/bjHflAC.jpg'
+    'CSD Colo Colo',
+    11490485000,
+    'img/colocolo.png'
   );
 
   createAndSaveElement(
-    'NBA Team (Average)',
-    2400000000,
-    'https://i.imgur.com/jNK0U47.jpg'
+    'Todos los jugadores de la selección chilena (2021)',
+    94307795000,
+    'img/seleccion.jpg'
   );
 
   createAndSaveElement(
-    'F1 Team (Average)',
-    700000000,
-    'https://i.imgur.com/RLozuOz.jpg'
+    'Departamento en Las Condes  (3 dor, 3 ba)',
+    513049167,
+    'https://http2.mlstatic.com/D_NQ_NP_981775-MLC47753582797_102021-UC.webp'
   );
 
   createAndSaveElement(
-    'Jet Gulfstream G450',
-    17000000,
-    'https://i.imgur.com/rfaTKtE.jpg'
-  );
-
-  createAndSaveElement('M1 Abrams', 8000000, 'https://i.imgur.com/TZP2OgW.jpg');
-
-  createAndSaveElement(
-    'Produce a Hollywood Movie',
-    90000000,
-    'https://i.imgur.com/JnQxbcn.jpg'
+    'Casa en Chicureo  (6 dor, 6 ba)',
+    512312275,
+    'img/chicureo.jpg'
   );
 
   createAndSaveElement(
-    'Regular Modern Apartment (3 bd, 2 ba)',
-    320000,
-    'https://i.imgur.com/6O3q6qR.jpg'
+    'Departamento de lujo en Paris (3 dor, 4 ba)',
+    2473289600,
+    'https://i.imgur.com/XpJY8RR.jpg'
   );
 
   createAndSaveElement(
-    'Paris Luxury Apartment(3 bd, 3 ba)',
-    3200000,
-    'https://i.imgur.com/dC7f2hN.jpg'
+    'Mega Mansión en Los Ángeles California (8 dor, 20 ba)',
+    42878545000,
+    'https://i.imgur.com/lH271mS.png'
   );
 
   createAndSaveElement(
-    'L.A Home (5bd, 6ba)',
-    6000000,
-    'https://i.imgur.com/jUV3CMC.jpg'
+    'Acciones de Piñera en Minera Dominga (2012)',
+    125409430000,
+    'img/dominga.jpg'
   );
 
   createAndSaveElement(
-    'L.A Mega Mansion (8 bd, 20 ba)',
-    52000000,
-    'https://i.imgur.com/2dosPGH.jpg'
-  );
-
-  createAndSaveElement(
-    'Modern Building (35 condos + 10 Offices)',
-    12000000,
+    'Edificio Moderno (35 deptos + 10 oficinas)',
+    9895048800,
     'https://i.imgur.com/gqBAmHe.jpg'
   );
 
-  createAndSaveElement('Sailboat', 130000, 'https://i.imgur.com/iLZmBPD.jpg');
-
   createAndSaveElement(
-    'Mega Yatch',
-    300000000,
-    'https://i.imgur.com/TGQFkeb.jpg'
+    'Canal 13 (avaluado en 2010)',
+    67647779000,
+    'img/13.jpg'
   );
 }
 
@@ -465,11 +448,11 @@ elements.forEach((element) => {
 
   newElement.innerHTML = `<img src="${element.image}" alt="${element.name}" />
   <p id="name">${element.name}</p>
-  <span id="price">USD ${formatMoney(element.price)}</span>
+  <span id="price">$${formatMoney(element.price)}</span>
   <div class="buyAndSellContainer" data-price="${element.price}">
-    <button class="btn-sell" id="sell" disabled>Sell</button>
+    <button class="btn-sell" id="sell" disabled>Vender</button>
     <span id="amount">${element.amount}</span>
-    <button class="btn-buy" id="buy" >Buy</button>
+    <button class="btn-buy" id="buy" >Comprar</button>
   </div>`;
 
   appContainer.appendChild(newElement);
