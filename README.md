@@ -18,6 +18,8 @@ Una visualizaci√≥n que te ayuda a entender la magnitud de la fortuna de Sebasti√
 
 https://www.spend-elon-fortune.com/
 
+https://github.com/ninotrivelli/Spend-Elon-Fortune
+
 Small vanilla JS web app I made while I learn how to code!
 Build from scratch using plain HTML, CSS, and JavaScript
 
