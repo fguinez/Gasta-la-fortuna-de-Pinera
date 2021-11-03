@@ -1,13 +1,13 @@
 # ¡Gasta la Fortuna de Sebastián Piñera!
 
-[www.piñera.live](http://www.piñera.live)
+🔗 **[www.piñera.live](http://www.piñera.live)**
 
 
 Una visualización que te ayuda a entender la magnitud de la fortuna de Sebastián Piñera.
 
 [![Previsualización de la web](https://i.imgur.com/Ybj3ZRf.png)](http://www.piñera.live)
 
-*Link alternativo a la visualización: pinera.herokuapp.com*
+*Link alternativo a la visualización: [pinera.herokuapp.com](pinera.herokuapp.com)*
 
 ## Referencias
 
