@@ -31,6 +31,11 @@ header img {
   width: 250px;
 }
 
+.profile {
+  padding: 1%;
+  margin-top: 2%;
+}
+
 .title-container {
   text-align: center;
 

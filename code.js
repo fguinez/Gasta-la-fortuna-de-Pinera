@@ -229,25 +229,30 @@ function preLoad() {
     'img/canasta.jpg'
   );
 
+  // $337.000 por mes
+  // https://www.dt.gob.cl/portal/1628/w3-article-60141.html
   createAndSaveElement(
     'Pagar un sueldo mínimo por 80 años',
     323520000,
     'img/sueldo-minimo.jpg'
   );
 
+  // $800 por pasaje x 2 por día x 80 años (800*2*365*80)
+  // https://www.metro.cl/tu-viaje/horarios-y-tarifas
   createAndSaveElement(
     'Pasajes Metro de Santiago por 80 años',
-    42048000,
+    46720000,
     'img/metro.jpg'
   );
 
+  // 37990 x Mes
+  // https://www.entel.cl/hogar/internet/
   createAndSaveElement(
-    'Nintendo Switch',
-    350000,
-    'https://i.imgur.com/0FO7MMz.jpg'
+    'Internet de alta velocidad (1 Giga) por 80 años',
+    36470400,
+    'img/internet.jpg'
   );
-  createAndSaveElement('PS5', 929900, 'https://i.imgur.com/0KSqKXn.jpg');
-  createAndSaveElement('Xbox Series X', 779990, 'https://i.imgur.com/NZ6ySwj.jpg');
+
   createAndSaveElement(
     'iPhone 12 Pro Max 256GB',
     1138900,
@@ -255,39 +260,55 @@ function preLoad() {
   );
 
   createAndSaveElement(
-    'Super PC Gamer (Ryzen 5950X, RTX 3090, 64GB, 4TB SSD)',
-    4080893,
-    'https://i.imgur.com/LVouJCx.jpg'
+    'Nintendo Switch',
+    350000,
+    'https://i.imgur.com/0FO7MMz.jpg'
   );
+
+  createAndSaveElement('Xbox Series X', 779990, 'https://i.imgur.com/NZ6ySwj.jpg');
+
+  createAndSaveElement('PS5', 929900, 'https://i.imgur.com/0KSqKXn.jpg');
+
   createAndSaveElement(
     'Razer Blade 14 (2021) (Mejores especificaciones)',
     2307559,
     'https://i.imgur.com/GymbKY5.jpg'
   );
+
+  createAndSaveElement(
+    'Super PC Gamer (Ryzen 5950X, RTX 3090, 64GB, 4TB SSD)',
+    4080893,
+    'https://i.imgur.com/LVouJCx.jpg'
+  );
+
   createAndSaveElement(
     'Mac Pro (2021) (Mejores especificaciones: 28 Cores, 8TB SSD, 1TB RAM, 32GB Video)',
     44353127,
     'https://i.imgur.com/3fGEKLh.jpg'
   );
+
   createAndSaveElement(
-    'Spotify por 80 años',
-    3984000,
-    'https://i.imgur.com/iMXaSUF.jpg'
+    "LG 88' OLED 8K ThinQ®",
+    16480213,
+    'https://i.imgur.com/0QQlGOv.jpg'
   );
+
   createAndSaveElement(
     'Todos los juegos de Steam (2021 - Sin descuentos)',
     517737570,
     'https://i.imgur.com/W5EmtUf.jpg'
   );
+
+  createAndSaveElement(
+    'Spotify por 80 años',
+    3984000,
+    'https://i.imgur.com/iMXaSUF.jpg'
+  );
+
   createAndSaveElement(
     'Netflix por 80 años',
     5702400,
     'https://i.imgur.com/gKxWs5h.jpg'
-  );
-  createAndSaveElement(
-    "LG 88' OLED 8K ThinQ®",
-    16480213,
-    'https://i.imgur.com/0QQlGOv.jpg'
   );
 
   createAndSaveElement(
@@ -368,22 +389,30 @@ function preLoad() {
   );
 
   createAndSaveElement(
+    'Una carrera universitaria en USA',
+    140152220,
+    'https://i.imgur.com/nX6YLXf.jpg'
+  );
+
+  createAndSaveElement(
     'Una semana en TODOS los países del planeta',
     1030531000,
     'https://i.imgur.com/CFjtIjN.jpg'
   );
 
-  // 50M USD
+  // 250K USD
   createAndSaveElement(
-    'Viaje al espacio por 3 días (estimado)',
-    40662612000,
-    'https://www.focus.it/images/2020/11/16/crew-dragon-resilience_1020x680.jpg'
+    'Viaje al espacio (1 persona)',
+    203369690,
+    'img/space_travel.jpg'
   );
 
+  // 791.666 dólares la noche
+  // 9.5 millones de dólares por 12 noches
   createAndSaveElement(
-    'Una carrera universitaria en USA',
-    140152220,
-    'https://i.imgur.com/nX6YLXf.jpg'
+    '12 noches en el futuro hotel espacial Aurora Station',
+    7730572400,
+    'img/space_hotel.jpg'
   );
 
   createAndSaveElement(
