@@ -7,7 +7,9 @@ let sellButtons = document.querySelectorAll('#sell');
 const appContainer = document.querySelector('.app-container');
 
 // Default data
-let initFortune = 2277818000000
+// 2.8B dolares
+// https://www.forbes.com/profile/sebastian-pinera/
+let initFortune = 2278336500000
 let fortune = initFortune;
 let totalPercentage = 100;
 
@@ -253,27 +255,34 @@ function preLoad() {
     'img/internet.jpg'
   );
 
+  // https://www.lider.cl/catalogo/product/sku/1143170?gclid=Cj0KCQjw5oiMBhDtARIsAJi0qk0Hv2eG0cy1Pl3Hof2nLG812wZ68NHg-bjKo5JCRDXVpb6mOCv9Dn8aAiazEALw_wcB
   createAndSaveElement(
     'iPhone 12 Pro Max 256GB',
-    1138900,
+    1158990,
     'https://i.linio.com/p/684a827e8d998b926524cedd05c9eb15-product.webp'
   );
 
+  // https://simple.ripley.cl/consola-nintendo-switch-neon-color-new-model-sniper-mpm00016486196?gclid=Cj0KCQjw5oiMBhDtARIsAJi0qk0ql-X8S6Jwfya0wXLOk0JUAcWTtj8Qog85IxIcbCbLlTZn_dH_ZfgaAtI5EALw_wcB&s=o
   createAndSaveElement(
     'Nintendo Switch',
     350000,
     'https://i.imgur.com/0FO7MMz.jpg'
   );
 
+  // https://www.linio.cl/p/consola-microsoft-xbox-series-x-1-tb-sniper-ryopon?adjust_t=1zira0_f1h7ws&adjust_google_network=u&adjust_google_placement=&adjust_campaign=LICL-LAB-AO-INSTI-LOC00001-MidROAS-Ago21-GG-Shopping-Conversion-Smart&adjust_adgroup=124100744291&utm_term=videogames&gclid=Cj0KCQjw5oiMBhDtARIsAJi0qk3TiBp-N3lsSKY0Qbe1TIFeE8bNTofX_IhWFH68eK1-6J2YpxTXs2EaAjnQEALw_wcB
   createAndSaveElement('Xbox Series X', 779990, 'https://i.imgur.com/NZ6ySwj.jpg');
 
-  createAndSaveElement('PS5', 929900, 'https://i.imgur.com/0KSqKXn.jpg');
+  // https://simple.ripley.cl/consola-playstation-5-ps5-version-con-lector-sniper-mpm00020127298?s=o
+  createAndSaveElement('PS5', 950900, 'https://i.imgur.com/0KSqKXn.jpg');
 
+  // 2.799,99 dolares
+  // https://www.xataka.com/ordenadores/razer-blade-14-2021-caracteristicas-precio-ficha-tecnica
   createAndSaveElement(
     'Razer Blade 14 (2021) (Mejores especificaciones)',
-    2307559,
+    2277703,
     'https://i.imgur.com/GymbKY5.jpg'
   );
+
 
   createAndSaveElement(
     'Super PC Gamer (Ryzen 5950X, RTX 3090, 64GB, 4TB SSD)',
@@ -281,34 +290,43 @@ function preLoad() {
     'https://i.imgur.com/LVouJCx.jpg'
   );
 
+  // https://www.paris.cl/qled-smart-tv-samsung-98-uhd-8k-98q900-967349999.html?utm_source=soicos&utm_medium=referral
   createAndSaveElement(
-    'Mac Pro (2021) (Mejores especificaciones: 28 Cores, 8TB SSD, 1TB RAM, 32GB Video)',
-    44353127,
+    "Televisor Samsung 98' QLED 8K",
+    31999990,
+    'img/televisor.jpg'
+  );
+
+  // 61.047,98 euros
+  // https://lamanzanamordida.net/noticias/one-more-thing/producto-mas-caro-apple-mac-2021/
+  createAndSaveElement(
+    'Mac Pro (2021) (Mejores especificaciones: 28 nucleos, 8TB SSD, 1.5TB RAM, 64GB Video)',
+    57583567,
     'https://i.imgur.com/3fGEKLh.jpg'
   );
 
-  createAndSaveElement(
-    "LG 88' OLED 8K ThinQ®",
-    16480213,
-    'https://i.imgur.com/0QQlGOv.jpg'
-  );
-
+  // 672.417,37 dolares
+  // https://steam.seewang.me
   createAndSaveElement(
     'Todos los juegos de Steam (2021 - Sin descuentos)',
-    517737570,
+    547079770,
     'https://i.imgur.com/W5EmtUf.jpg'
   );
 
+  // $ 4.150 pesos por mes
+  // https://www.spotify.com/cl/premium/
   createAndSaveElement(
     'Spotify por 80 años',
     3984000,
     'https://i.imgur.com/iMXaSUF.jpg'
   );
 
+  // 5.940 pesos por mes(Plan Básico)
+  // https://help.netflix.com/es/node/24926
   createAndSaveElement(
     'Netflix por 80 años',
     5702400,
-    'https://i.imgur.com/gKxWs5h.jpg'
+    'img/netflix.jpg'
   );
 
   createAndSaveElement(
@@ -333,26 +351,32 @@ function preLoad() {
     'https://i.imgur.com/VcilGS4.jpg'
   );
   createAndSaveElement('Ferrari F8', 243205100, 'https://i.imgur.com/8LNZBZi.jpg');
+  
   createAndSaveElement(
     'Lamborghini Aventador SVJ',
     422105120,
     'https://i.imgur.com/2zzI1XB.jpg'
   );
+
   createAndSaveElement(
     'Bugatti La Voiture Noire',
     9068664800,
     'https://i.imgur.com/4TTHYJQ.jpg'
   );
+
   createAndSaveElement(
     '1000 hectareas en Chiloé',
     5000000000,
     'img/chiloe.gif'
   );
+
   createAndSaveElement(
     'Isla Privada, Centroamérica (tamaño mediano)',
     4080899200,
     'https://i.imgur.com/1am1OfX.jpg'
   );
+
+  // 21.881 pesos por comida
   createAndSaveElement(
     'Comer afuera por 80 años (4 comidas por día)',
     2555714600,
@@ -401,14 +425,15 @@ function preLoad() {
   );
 
   // 250K USD
+  // https://cnnespanol.cnn.com/video/viajes-espacio-exterior-millonarios-costos-altos-virgin-galactic-blue-origin-clix/
   createAndSaveElement(
     'Viaje al espacio (1 persona)',
     203369690,
     'img/space_travel.jpg'
   );
 
-  // 791.666 dólares la noche
   // 9.5 millones de dólares por 12 noches
+  // https://www.bbc.com/mundo/vert-fut-47729901
   createAndSaveElement(
     '12 noches en el futuro hotel espacial Aurora Station',
     7730572400,

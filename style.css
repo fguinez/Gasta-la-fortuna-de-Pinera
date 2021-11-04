@@ -183,7 +183,7 @@ button {
 
 .btn-print {
   display: block;
-
+  padding-bottom: 5%;
   text-align: center;
 }
 
@@ -193,7 +193,7 @@ button {
 }
 
 .btn-print button:hover {
-  background-color: rgb(125, 135, 143);
+  background-color: rgb(65, 111, 148);
   color: white;
 }
 
@@ -202,6 +202,10 @@ button {
   display: block;
   font-size: 1.7rem;
   margin: 3rem;
+}
+
+#coffe-final {
+  color: rgb(65, 111, 148);
 }
 
 .coffe-link a {
